@@ -29,7 +29,6 @@ public class precisaoDecimal {
         System.out.println("--- Correção exata usando java.math.BigDecimal ---");
         System.out.println("Resultado com BigDecimal (String Constructor): " + resultadoPreciso);
 
-        //Divisão de parcelas
         BigDecimal bigCompra = new BigDecimal(valorTotal);
         BigDecimal valorParcela = bigCompra.divide(BigDecimal.valueOf(numParcelas), 2, RoundingMode.HALF_UP);
 
