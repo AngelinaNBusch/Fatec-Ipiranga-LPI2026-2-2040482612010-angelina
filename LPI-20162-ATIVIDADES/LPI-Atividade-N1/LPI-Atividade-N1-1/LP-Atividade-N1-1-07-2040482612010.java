@@ -14,8 +14,6 @@ public class precisaoDecimal {
         System.out.print("Informe o número de parcelas: ");
         int numParcelas = Integer.parseInt(sc.nextLine());
 
-        //Forma exata usando java.math.BigDecimal
-
         BigDecimal bigA = new BigDecimal(valorA);
         BigDecimal bigB = new BigDecimal(valorB);
         BigDecimal resultadoPreciso = bigA.subtract(bigB);
