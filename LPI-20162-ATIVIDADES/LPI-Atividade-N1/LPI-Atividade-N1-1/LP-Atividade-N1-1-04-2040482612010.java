@@ -19,8 +19,6 @@ public static void main(String[] args) {
     System.out.print("Informe o número de dias do empréstimo: ");
     final int diasEmprestimo = sc.nextInt();
     final int diasParaDevolucao = calcularDiasDevolucao(diasEmprestimo);
-
-    //Tentar reatribuir o prazo máximo de devolução geraria um erro de compilação, pois essa variável é final.
     
     System.out.println("Instituição: " + NOME_INSTITUICAO);
     System.out.println("Prazo Máximo Padrão: " + PRAZO_MAXIMO_PADRAO + " dias." );
