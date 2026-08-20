@@ -16,7 +16,10 @@ public class Aluno {
         System.out.print("Informe o percentual de presença: ");
         double presenca = sc.nextDouble();
 
+        //Operações sem parênteses
         double semParenteses = a + b - c * d / c;
+
+        //Operações com parênteses
         double comParenteses = a + b - ((c * d) / c);
 
         System.out.println("--- Demonstração de Precedência Aritmética ---");
