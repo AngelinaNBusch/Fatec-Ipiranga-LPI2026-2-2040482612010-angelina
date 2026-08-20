@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Estoque { 
     public static void main(String[] args) { 
         Scanner sc = new Scanner(System.in);
-
+        // ENTRADA DE DADOS
         System.out.print("Estoque inicial: ");
         int estoqueInicial = sc.nextInt();
         System.out.print("Quantidade de entrada: ");
@@ -16,6 +16,7 @@ public class Estoque {
         System.out.print("Tamanho do lote (caixa): ");
         int tamLote = sc.nextInt();
 
+        //SAÍDA 
        int estoque = estoqueInicial;
         System.out.println("Estoque inicial: " + estoqueInicial + " unidades.");
         estoque += qtdEntrada;
