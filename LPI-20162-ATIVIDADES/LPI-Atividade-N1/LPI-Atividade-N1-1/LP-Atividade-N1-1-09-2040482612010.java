@@ -21,5 +21,17 @@ public class Nota {
         System.out.println("Situação (ternário): " + situacaoTernario);
 
         sc.close();
+        //Exemplo de operador ternário ENCADEADO (nested ternary), considerando um terceiro
+        //resultado (por exemplo: Exame), com as opções Reprovado (<4), Exame (4 a <6) e Aprovado (>=6):
+        //String situacaoComExame = (notaFinal >= 6) ? "Aprovado"
+        //: (notaFinal >= 4) ? "Exame"
+        //: "Reprovado";
+
+        //Essa abordagem DEVE SER EVITADA, pois reúne diversas condições dentro de uma única
+        //expressão, deixando o código mais difícil de compreender (é necessário separar mentalmente
+        //cada operador ternário para entender seu funcionamento), complica a depuração (não é possível
+        //definir um breakpoint diretamente em uma condição específica) e aumenta a possibilidade de erros
+        //ao incluir ou modificar regras. Quando existem mais de dois resultados possíveis, utilizar
+        //um if/else if tradicional torna a lógica equivalente muito mais fácil de interpretar.
     }
 }
