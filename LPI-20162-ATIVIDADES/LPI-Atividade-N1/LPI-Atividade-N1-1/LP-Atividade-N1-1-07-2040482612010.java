@@ -14,9 +14,16 @@ public class precisaoDecimal {
         System.out.print("Informe o número de parcelas: ");
         int numParcelas = Integer.parseInt(sc.nextLine());
 
+        //Forma exata usando java.math.BigDecimal
+
         BigDecimal bigA = new BigDecimal(valorA);
         BigDecimal bigB = new BigDecimal(valorB);
         BigDecimal resultadoPreciso = bigA.subtract(bigB);
+       
+        //Exemplo da imprecisão presente no padrão IEEE 754 --
+        //Ao transformar Strings decimais em valores double, o número é representado em formato binário
+        //que não permite armazenar com exatidão algumas frações decimais, como 0.1 ou 0.9.
+        //Isso pode ocasionar pequenas diferenças de arredondamento.
 
         double doubleA = Double.parseDouble(valorA);
         double doubleB = Double.parseDouble(valorB);
@@ -29,6 +36,7 @@ public class precisaoDecimal {
         System.out.println("--- Correção exata usando java.math.BigDecimal ---");
         System.out.println("Resultado com BigDecimal (String Constructor): " + resultadoPreciso);
 
+        //Divisão das parcelas
         BigDecimal bigCompra = new BigDecimal(valorTotal);
         BigDecimal valorParcela = bigCompra.divide(BigDecimal.valueOf(numParcelas), 2, RoundingMode.HALF_UP);
 
