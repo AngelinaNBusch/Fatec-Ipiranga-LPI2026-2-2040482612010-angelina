@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class comparacaoInteger { 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+        // entrada
         System.out.print("Valor para a comparação de primitivos: ");
         int valorPrimitivo = sc.nextInt();
         
@@ -27,6 +27,7 @@ public class comparacaoInteger {
         Integer xForaCache = valorForaCache;
         Integer yForaCache = valorForaCache;
 
+        // Saída
         System.out.println("--- Comparação de primitivos (int) =---");
         System.out.println("aPrimitivo == bPrimitivo: " + (aPrimitivo == bPrimitivo));
         System.out.println("--- Comparação de Objetos via 'new Integer()' ---");
